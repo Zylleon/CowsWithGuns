@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <defName>CWG_GunCowRace</defName>
+    <label>Sentient Cow</label>
+    <description>This is an cow. It's sentient. Sort of.</description>
+	<statBases>
+      <MoveSpeed>3.2</MoveSpeed>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <MarketValue>300</MarketValue>
+    </statBases>
+	<!-- <comps> -->
+      <!-- <li Class="CompProperties_Milkable"> -->
+        <!-- <milkDef>Milk</milkDef> -->
+        <!-- <milkIntervalDays>1</milkIntervalDays> -->
+        <!-- <milkAmount>15</milkAmount> -->
+      <!-- </li> -->
+    <!-- </comps> -->
+    
+    <alienRace>
+        <generalSettings>
+			<maxDamageForSocialfight>6</maxDamageForSocialfight>
+			<humanRecipeImport>true</humanRecipeImport>
+			<maleGenderProbability>0</maleGenderProbability>
+			<alienPartGenerator>
+				<aliencrowntypes>
+					<li>Average_Normal</li>
+				</aliencrowntypes>
+				<useGenderedHeads>false</useGenderedHeads>
+				<alienbodytypes>
+					<li>Female</li>
+				</alienbodytypes>
+				<customDrawSize>(1.8, 1.8)</customDrawSize>
+				
+
+				<headOffset>(0, 0)</headOffset>
+				<customHeadDrawSize>(1.8, 1.8)</customHeadDrawSize>
+			</alienPartGenerator>
+			<useOnlyPawnkindBackstories>true</useOnlyPawnkindBackstories>
+		
+		</generalSettings>
+        <graphicPaths>
+			<li>
+				<head>CWG_Cow/Head/</head>
+				<body>CWG_Cow/Body/</body>
+			</li>
+        </graphicPaths>
+        <hairSettings>
+			<hasHair>false</hasHair>
+        </hairSettings>
+        <thoughtSettings>
+			<replacerList>
+		
+				
+            </replacerList>
+			<cannotReceiveThoughts>
+				<li>Naked</li>
+			</cannotReceiveThoughts>
+        </thoughtSettings>
+        <relationSettings>
+
+        </relationSettings>
+        <raceRestriction>
+			<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+
+        </raceRestriction>
+    </alienRace>
+	
+
+    <tools>  <!-- cow tools -->
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8.8</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>left hoof</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hoof</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+      </li>
+    </tools>
+  
+
+	<race> <!-- cow race -->
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>22</lifeExpectancy>
+	  
+      <leatherDef>Leather_Plain</leatherDef>
+
+	  <foodType>VegetarianRoughAnimal</foodType>
+	  
+      <nameCategory>HumanStandard</nameCategory>
+      <body>QuadrupedAnimalWithHooves</body>
+      <baseBodySize>2</baseBodySize>
+      <baseHealthScale>1.5</baseHealthScale>
+      
+      <gestationPeriodDays>20</gestationPeriodDays>
+
+      <manhunterOnDamageChance>0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(1,0)</li>
+          <li>(2,100)</li>
+          <li>(4,100)</li>
+          <li>(14,30)</li>
+          <li>(18,18)</li>
+          <li>(22,10)</li>
+          <li>(25,3)</li>
+          <li>(30,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+        <li>Human</li>
+      </hediffGiverSets>
+    </race>
+    <recipes>  <!-- no idea if this will work -->
+	  <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+    </recipes>
+
+</AlienRace.ThingDef_AlienRace>
+
+ </Defs>

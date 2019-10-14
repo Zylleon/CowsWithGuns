@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ModMetaData>
+  <name>Cows With Guns</name>
+  <author>Zylle</author>
+  <supportedVersions><li>1.0</li></supportedVersions>
+  <description>
+    Cows with guns will raid your base! You can recruit them if you want, but they're terrible workers. They're cows.
+	
+	REQUIRES humanoid alien races: https://steamcommunity.com/workshop/filedetails/?id=839005762 
+	Load after humanoid alien races.
+	
+	Requires a new save. 
+	
+	This is not a serious mod. There are probably balance issues, tell me if you run into any trouble
+	
+  </description>
+</ModMetaData>

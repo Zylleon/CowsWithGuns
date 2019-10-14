@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef>
+	<defName>CWG_GunCowHerd</defName>
+	<label>cow herd</label>
+    <pawnSingular>cow</pawnSingular>
+    <pawnsPlural>cows</pawnsPlural>
+	<requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <listOrderPriority>12</listOrderPriority>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>great cow guru</leaderTitle>
+	<hidden>true</hidden>
+    <colorSpectrum>
+      <li>(0.45, 0.05, 0.05)</li>
+      <li>(0.80, 0.25, 0.05)</li>
+    </colorSpectrum>
+    <permanentEnemy>true</permanentEnemy>
+	<factionNameMaker>NamerFactionPirate</factionNameMaker>
+	<techLevel>Spacer</techLevel>
+	<backstoryCategories>
+		<li>CWG_GunCowBackstory</li>
+	</backstoryCategories>
+	<geneticVariance>0.8</geneticVariance>
+	<hairTags>
+		<li>Urban</li>
+	</hairTags>
+    <allowedArrivalTemperatureRange>
+      <min>-20</min>
+      <max>55</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,45)</li>
+        <li>(70, 60)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+  
+    <pawnGroupMakers>
+      <li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+		<kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <CWG_Cattle>10</CWG_Cattle>
+		  <CWG_Guard>3</CWG_Guard>
+          <CWG_Pirate>10</CWG_Pirate>
+          <CWG_Gunner>10</CWG_Gunner>
+          <CWG_HeavyGunner>6</CWG_HeavyGunner>
+          <CWG_Sniper>7</CWG_Sniper>
+          <CWG_Elite>10</CWG_Elite>
+          <CWG_CowGuru>5</CWG_CowGuru>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee-only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <CWG_Guard>10</CWG_Guard>
+          <CWG_CowGuru>5</CWG_CowGuru>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>20</commonality>
+        <options>
+          <CWG_Pirate>10</CWG_Pirate>
+          <CWG_Gunner>10</CWG_Gunner>
+          <CWG_HeavyGunner>6</CWG_HeavyGunner>
+          <CWG_Sniper>7</CWG_Sniper>
+          <CWG_Elite>10</CWG_Elite>
+          <CWG_CowGuru>5</CWG_CowGuru>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, explosives with ranged mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <CWG_Gunner>1</CWG_Gunner>
+          <CWG_HeavyGunner>10</CWG_HeavyGunner>
+          <CWG_Elite>1</CWG_Elite>
+          <CWG_CowGuru>1</CWG_CowGuru>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, snipers only -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <CWG_Sniper>10</CWG_Sniper>
+        </options>
+      </li>
+   
+    </pawnGroupMakers>
+	
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+  </FactionDef>
+
+
+</Defs>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <PawnKindDef Name="CWG_RaiderBase" Abstract="True">
+    <race>CWG_GunCowRace</race>
+    <defaultFactionType>CWG_GunCowHerd</defaultFactionType>
+    <backstoryCategories>
+      <li>CWG_GunCowBackstory</li>
+    </backstoryCategories>
+    <maxGenerationAge>30</maxGenerationAge>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Kibble</invFoodDef>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<apparelMoney>
+      <min>0</min>
+      <max>0</max>
+    </apparelMoney>
+  </PawnKindDef>
+
+
+<!--Raider Types-->
+
+  <PawnKindDef ParentName="CWG_RaiderBase">						<!-- * 55: gun -->
+    <defName>CWG_Guard</defName>
+    <label>feedlot guard</label>
+    <combatPower>55</combatPower>
+    <isFighter>true</isFighter>
+    <gearHealthRange>
+      <min>0.6</min>
+      <max>2</max>
+    </gearHealthRange>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <weaponMoney>
+      <min>250</min>
+      <max>400</max>
+    </weaponMoney>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>
+      <min>200</min>
+      <max>700</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+    </techHediffsTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CWG_RaiderBase">						<!-- * 40: gun -->
+    <defName>CWG_Cattle</defName>
+    <label>cattle</label>
+    <combatPower>40</combatPower>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <weaponMoney>
+      <min>200</min>
+      <max>200</max>
+    </weaponMoney>
+
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>
+      <min>600</min>
+      <max>1500</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CWG_RaiderBase"> 						<!-- * 65: Gun-->
+    <defName>CWG_Pirate</defName>
+    <label>pirate cow</label>
+    <combatPower>65</combatPower>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <weaponMoney>
+      <min>250</min>
+      <max>345</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>800</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+    </techHediffsTags>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>40</min>
+            <max>80</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CWG_RaiderBase" Name="CWG_MidTierBase" Abstract="True"> 
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>
+      <min>700</min>
+      <max>1200</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CWG_MidTierBase"> 			<!-- * 90: Gun-->
+    <defName>CWG_Gunner</defName>
+    <label>gunner</label>
+    <combatPower>90</combatPower>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>3.2</max>
+    </gearHealthRange>
+    <weaponMoney>
+      <min>330</min>
+      <max>650</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CWG_MidTierBase"> 					<!-- * 110: Sniper Rifle -->
+    <defName>CWG_Sniper</defName>
+    <label>sniper</label>
+    <combatPower>110</combatPower>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>3.2</max>
+    </gearHealthRange>
+    <weaponMoney>
+      <min>600</min>
+      <max>600</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+   
+  <PawnKindDef ParentName="CWG_MidTierBase"> 				<!-- * 150: gunheavy -->
+    <defName>CWG_HeavyGunner</defName>
+    <label>heavy mercenary</label>
+    <labelPlural>heavy mercenaries</labelPlural>
+    <combatPower>150</combatPower>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>3.2</max>
+    </gearHealthRange>
+    <weaponMoney>
+      <min>1200</min>
+      <max>1200</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>GunHeavy</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef Abstract="True" Name="CWG_EliteBase" ParentName="CWG_RaiderBase">
+    <combatPower>150</combatPower>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <weaponMoney>
+      <min>500</min>
+      <max>1400</max>
+    </weaponMoney>
+    <weaponTags>
+			<li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>1200</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.35</techHediffsChance>
+    <combatEnhancingDrugsChance>0.80</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>1</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CWG_EliteBase">  			<!-- * 150: IndustrialGunAdvanced -->
+    <defName>CWG_CowGuru</defName>
+    <label>great cow guru</label>
+    <labelPlural>great cow gurus</labelPlural>
+    <factionLeader>true</factionLeader>
+    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+    <canBeSapper>true</canBeSapper>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CWG_EliteBase">  			<!-- * 150: IndustrialGunAdvanced -->
+    <defName>CWG_Elite</defName>
+    <label>elite beast</label>
+    <labelPlural>elite mercenaries</labelPlural>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+
+</Defs>

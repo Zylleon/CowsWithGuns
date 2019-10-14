@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<AlienRace.BackstoryDef>
+    <defName>CWG_Bovine</defName>
+    <title>bovine</title>
+    <titleShort>Silent</titleShort>
+    <baseDescription>[PAWN_nameDef] is a gun-toting bovine.</baseDescription>
+	<bodyTypeGlobal>Female</bodyTypeGlobal>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+      <li>CWG_GunCowBackstory</li>
+    </spawnCategories>
+	<skillGains>
+    </skillGains>
+	<workDisables>
+        <li>ManualSkilled</li>
+		<li>Caring</li> 
+		<li>Cooking</li>
+		<li>Artistic</li>
+		<li>Intellectual</li>
+    </workDisables>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>CWG_BabyBovine</defName>
+    <title>calf</title>
+    <titleShort>calf</titleShort>
+    <baseDescription>[PAWN_nameDef] was a baby gun-toting bovine.</baseDescription>
+	<bodyTypeGlobal>Female</bodyTypeGlobal>
+	<slot>Childhood</slot>
+	<spawnCategories>
+      <li>CWG_GunCowBackstory</li>
+    </spawnCategories>
+	<skillGains>
+    </skillGains>
+	<workDisables>
+        <li>ManualSkilled</li>
+		<li>Caring</li> 
+		<li>Cooking</li>
+		<li>Artistic</li>
+		<li>Intellectual</li>
+    </workDisables>
+</AlienRace.BackstoryDef>
+
+</Defs>
