@@ -43,6 +43,8 @@
 			<li>
 				<head>CWG_Cow/Head/</head>
 				<body>CWG_Cow/Body/</body>
+				<skeleton>Things/Pawn/Animal/Cow/Dessicated_Cow</skeleton>
+				<skull>CWG_Cow/Skull/Skull</skull>
 			</li>
         </graphicPaths>
         <hairSettings>
